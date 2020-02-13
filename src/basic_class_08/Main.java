@@ -35,6 +35,7 @@ public class Main {
             stringBuilder.append(after);
             return  stringBuilder.toString();
         }
+        System.out.println("lalallala");
         return compressed.substring(start,end+1);
     }
 }

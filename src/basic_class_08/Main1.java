@@ -1,4 +1,4 @@
 package basic_class_08;
 
-public class Test {
+public class Main1 {
 }
