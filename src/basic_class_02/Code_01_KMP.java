@@ -1,5 +1,7 @@
 package basic_class_02;
 
+import java.util.Arrays;
+
 public class Code_01_KMP {
 
 	public static int getIndexOf(String s, String m) {
@@ -44,12 +46,38 @@ public class Code_01_KMP {
 		}
 		return next;
 	}
+	
+	public static int[] getNextArray_practice(char[] ms) {
+		if(ms.length==1) {
+			return new int[] {-1};
+		}
+		
+		int[] next=new int[ms.length];
+		next[0]=-1;
+		next[1]=0;
+		for(int i=2;i<next.length;i++) {
+			int pre=i-1;
+			while(pre>0) {
+				int preNext=next[pre];
+				if(ms[preNext]==ms[pre])
+				{
+					next[i]=preNext+1;
+					break;
+				}
+				else
+					pre=preNext;
+			}
+		}
+		return next;
+	}
 
 	public static void main(String[] args) {
 		String str = "abcabcababaccc";
 		String match = "ababa";
 		System.out.println(getIndexOf(str, match));
-
+		
+		System.out.println(Arrays.toString(getNextArray(str.toCharArray())));
+		System.out.println(Arrays.toString(getNextArray_practice(str.toCharArray())));
 	}
 
 }

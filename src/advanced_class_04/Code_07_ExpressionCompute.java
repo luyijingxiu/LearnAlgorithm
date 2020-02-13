@@ -2,6 +2,11 @@ package advanced_class_04;
 
 import java.util.LinkedList;
 
+/**
+ * 
+ * @author 雷云竹
+ *
+ */
 public class Code_07_ExpressionCompute {
 
 	public static int getValue(String str) {

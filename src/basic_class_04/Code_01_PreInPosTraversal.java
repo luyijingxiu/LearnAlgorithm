@@ -63,7 +63,7 @@ public class Code_01_PreInPosTraversal {
 	public static void inOrderUnRecur(Node head) {
 		System.out.print("in-order: ");
 		if (head != null) {
-			Stack<Node> stack = new Stack<Node>();
+			Stack<Node> stack = new Stack<>();
 			while (!stack.isEmpty() || head != null) {
 				if (head != null) {
 					stack.push(head);
@@ -77,6 +77,7 @@ public class Code_01_PreInPosTraversal {
 		}
 		System.out.println();
 	}
+
 
 	public static void posOrderUnRecur1(Node head) {
 		System.out.print("pos-order: ");
