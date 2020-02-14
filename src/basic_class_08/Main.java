@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        String str="HG[3|B[2|CA]]F";
+        String str="HL[3|B[2|CA]]F";
         System.out.println(new Main().decode(str,0,str.length()-1));
     }
 
@@ -36,6 +36,7 @@ public class Main {
             return  stringBuilder.toString();
         }
         System.out.println("lalallala");
+        System.out.println("add line");
         return compressed.substring(start,end+1);
     }
 }
